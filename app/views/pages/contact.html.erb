@@ -1,0 +1,14 @@
+<h2> Conheça nossa familia: </h2>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Quem você está produrando?">
+  <input type="submit">
+</form>
+
+<ol>
+<% @members.each do |member| %>
+<li><%= member.capitalize %> </li>
+<% end %>
+</ol>
+
+<%= link_to "Voltar à Home", home_path %>
